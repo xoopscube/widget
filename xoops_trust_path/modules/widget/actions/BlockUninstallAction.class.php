@@ -88,5 +88,3 @@ class Widget_BlockUninstallAction extends Widget_AbstractEditAction
     }
 
 }
-
-?>

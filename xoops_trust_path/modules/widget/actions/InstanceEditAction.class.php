@@ -92,4 +92,3 @@ class Widget_InstanceEditAction extends Widget_AbstractEditAction
         return WIDGET_FRAME_VIEW_SUCCESS;
     }
 }
-?>

@@ -58,5 +58,3 @@ class Widget_InstanceDeleteAction extends Widget_AbstractDeleteAction
 		return WIDGET_FRAME_VIEW_ERROR;
 	}
 }
-
-?>

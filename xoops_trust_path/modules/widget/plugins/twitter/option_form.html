@@ -1,12 +1,12 @@
 <div class="control-group">
     <label for="p_type" class="control-label required"><{$object->getOptionTitle('p_type')}></label>
     <div class="controls">
-      <select name="p_type" id="p_type">
-          <option value="profile"<{if $object->getOptionValue('p_type')=='profile'}> selected="selected"<{/if}>><{$smarty.const._WIDGET_PLUGIN_TWITTER_TYPE_PROFILE}></option>
-          <option value="search"<{if $object->getOptionValue('p_type')=='search'}> selected="selected"<{/if}>><{$smarty.const._WIDGET_PLUGIN_TWITTER_TYPE_SEARCH}></option>
-          <option value="faves"<{if $object->getOptionvalue('p_type')=='faves'}> selected="selected"<{/if}>><{$smarty.const._WIDGET_PLUGIN_TWITTER_TYPE_FAVES}></option>
-          <option value="list"<{if $object->getOptionValue('p_type')=='list'}> selected="selected"<{/if}>><{$smarty.const._WIDGET_PLUGIN_TWITTER_TYPE_LIST}></option>
-      </select>
+        <select name="p_type" id="p_type">
+            <option value="profile"<{if $object->getOptionValue('p_type')=='profile'}> selected="selected"<{/if}>><{$smarty.const._WIDGET_PLUGIN_TWITTER_TYPE_PROFILE}></option>
+            <option value="search"<{if $object->getOptionValue('p_type')=='search'}> selected="selected"<{/if}>><{$smarty.const._WIDGET_PLUGIN_TWITTER_TYPE_SEARCH}></option>
+            <option value="faves"<{if $object->getOptionvalue('p_type')=='faves'}> selected="selected"<{/if}>><{$smarty.const._WIDGET_PLUGIN_TWITTER_TYPE_FAVES}></option>
+            <option value="list"<{if $object->getOptionValue('p_type')=='list'}> selected="selected"<{/if}>><{$smarty.const._WIDGET_PLUGIN_TWITTER_TYPE_LIST}></option>
+        </select>
     </div>
 </div>
 <div class="control-group profile faves list">

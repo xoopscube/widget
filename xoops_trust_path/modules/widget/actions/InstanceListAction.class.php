@@ -28,10 +28,10 @@ class Widget_InstanceListAction extends Widget_AbstractListAction
 	 **/
 	public function getDefaultView()
 	{
-		$this->mFilter =& $this->_getFilterForm();
+		$this->mFilter = $this->_getFilterForm();
 		$this->mFilter->fetch();
 
-		$handler =& $this->_getHandler();
+		$handler = $this->_getHandler();
 		$criteria=$this->mFilter->getCriteria();
 
 		$this->mObjects = $handler->getObjects($criteria);
@@ -71,4 +71,3 @@ class Widget_InstanceListAction extends Widget_AbstractListAction
 		$render->setAttribute('accessController', $this->mAccessController['main']);
 	}
 }
-?>

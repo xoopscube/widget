@@ -1,27 +1,31 @@
-<div class="widget">
-<{include file="db:`$dirname`_inc_menu.html"}>
+<{* Dev-Mode Toggle *}>
+<{if $xoops_isadmin}><div class="ui-dev-mode"><{$smarty.template}></div><{/if}>
 
-<h1><{$smarty.const._MD_WIDGET_LANG_PLUGIN}><{$smarty.const._LIST}></h1>
+<article class="widget">
 
-<{if count($plugins) > 0}>
-  <table class="table table-striped" summary="">
-    <thead>
-      <tr>
-        <th>
-          <{$smarty.const._MD_WIDGET_LANG_TITLE}>
-        </th>
-      <th>
-          <{$smarty.const._MD_WIDGET_LANG_DESCRIPTION}>
-      </th>
-    </thead>
-    <tbody>
-      <{foreach item=plugin from=$plugins}>
-        <tr class="<{cycle values='odd,even'}>">
-          <td><{$plugin.title}> <a href="<{xoops_cooluri dirname=$dirname dataname=instance action=edit query="type=`$plugin.type`"}>"><{$smarty.const._ADD}></a></td>
-          <td><{$plugin.description}></td>
+    <header>
+    <h2><{$smarty.const._MD_WIDGET_LANG_PLUGIN}><{$smarty.const._LIST}></h2>
+    <p><{include file="db:`$dirname`_inc_menu.html"}></p>
+    </header>
+
+    <{if count($plugins) > 0}>
+    <table>
+        <thead>
+        <tr>
+            <th><{$smarty.const._MD_WIDGET_LANG_TITLE}></th>
+            <th><{$smarty.const._MD_WIDGET_LANG_DESCRIPTION}></th>
+            <th class="list-action">Action</th>
+        </thead>
+        <tbody>
+        <{foreach item=plugin from=$plugins}>
+        <tr>
+            <td><{$plugin.title}> </td>
+            <td><{$plugin.description}></td>
+            <td class="list-action"><a href="<{xoops_cooluri dirname=$dirname dataname=instance action=edit query="type=`$plugin.type`"}>" data-tooltip="<{$smarty.const._ADD}>">
+                <img class="svg block" src="<{$xoops_url}>/images/icons/block-plus.svg" width="1em" height="1em" alt="block"></a></td>
         </tr>
-      <{/foreach}>
-    </tbody>
-  </table>
-<{/if}>
-</div>
+        <{/foreach}>
+        </tbody>
+    </table>
+    <{/if}>
+</article>

@@ -1,33 +1,50 @@
-<div class="widget">
-<{include file="db:`$dirname`_inc_menu.html"}>
+<{* Dev-Mode Toggle *}>
+<{if $xoops_isadmin}><div class="ui-dev-mode"><{$smarty.template}></div><{/if}>
 
-<h1><{$smarty.const._MD_WIDGET_LANG_INSTANCE_EDIT}></h1>
-<{if $actionForm->hasError()}>
-  <ul class="alert alert-error">
-    <{foreach item=message from=$actionForm->getErrorMessages()}>
-      <li><{$message|xoops_escape}></li>
-    <{/foreach}>
-  </ul>
-<{/if}>
+
+
+
 <form action="<{xoops_cooluri dirname=$dirname dataname=instance action=edit}>" method="post"<{if $object->mPlugin.use_image==1}> enctype="multipart/form-data"<{/if}>>
 
-  <{xoops_input type=hidden name=instance_id value=$actionForm->get('instance_id')}>
-  <{xoops_input type=hidden name=type value=$actionForm->get('type')}>
+<article class="widget">
 
-  <div class="control-group">
-    <label for="title" class="control-label required"><{$smarty.const._MD_WIDGET_LANG_TITLE}></label>
-    <div class="controls"><{xoops_input type=text name=title value=$actionForm->get('title') class="span4" maxlength=255required}></div>
-  </div>
-  <{xoops_input type="hidden" name="category_id" value="0"}>
-  <{include file=$optionFormPath}>
-  <div class="control-group">
-    <label for="template" class="control-label"><{$smarty.const._MD_WIDGET_LANG_TEMPLATE}></label>
-    <div class="controls"><{xoops_input type=text name=template value=$actionForm->get('template')}></div>
-  </div>
-  <div class="form-actions">
-      <{xoops_token form=$actionForm}>
-      <button type="submit" value="<{$smarty.const._SUBMIT}>"><{$smarty.const._SUBMIT}></button>
-      <button type="submit" value="<{$smarty.const._CANCEL}>" name="_form_control_cancel"><{$smarty.const._CANCEL}></button>
-  </div>
+<header>
+    <h2><{$smarty.const._MD_WIDGET_LANG_INSTANCE_EDIT}></h2>
+    <p><{include file="db:`$dirname`_inc_menu.html"}></p>
+</header>
+
+    <{if $actionForm->hasError()}>
+    <ul class="alert error">
+        <{foreach item=message from=$actionForm->getErrorMessages()}>
+        <li><{$message|xoops_escape}></li>
+        <{/foreach}>
+    </ul>
+    <{/if}>
+
+
+    <{xoops_input type=hidden name=instance_id value=$actionForm->get('instance_id')}>
+    <{xoops_input type=hidden name=type value=$actionForm->get('type')}>
+
+    <label for="title" class="required">
+        <{$smarty.const._MD_WIDGET_LANG_TITLE}>
+        <{xoops_input type=text name=title value=$actionForm->get('title') maxlength=191 required}>
+    </label>
+
+    <{xoops_input type="hidden" name="category_id" value="0"}>
+
+    <{include file=$optionFormPath}>
+
+    <label for="template">
+        <{$smarty.const._MD_WIDGET_LANG_TEMPLATE}>
+        <{xoops_input type=text name=template value=$actionForm->get('template')}>
+    </label>
+
+    <footer class="action-control">
+        <{xoops_token form=$actionForm}>
+        <button type="submit" value="<{$smarty.const._SUBMIT}>"><{$smarty.const._SUBMIT}></button>
+        <button type="submit" value="<{$smarty.const._CANCEL}>" name="_form_control_cancel"><{$smarty.const._CANCEL}></button>
+    </footer>
+
+
+</article>
 </form>
-</div>

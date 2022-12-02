@@ -1,45 +1,72 @@
-<div class="widget">
-<{include file="db:`$dirname`_inc_menu.html"}>
+<{* Dev-Mode Toggle *}>
+<{if $xoops_isadmin}><div class="ui-dev-mode"><{$smarty.template}></div><{/if}>
 
-<h1><{$smarty.const._MD_WIDGET_LANG_WIDGET}><{$smarty.const._LIST}></h1>
 
-<{if count($objects) > 0}>
-  <div class="pagenavi"><{xoops_pagenavi pagenavi=$pageNavi}></div>
-  <table class="table table-striped" summary="">
-    <thead>
-      <tr>
-        <th>
-          ID
-        </th>
-        <th>
-          <{$smarty.const._MD_WIDGET_LANG_TITLE}>
-        </th>
-        <th>
-          <{$smarty.const._MD_WIDGET_LANG_TYPE}>
-        </th>
-        <th>
-          <{$smarty.const._MD_WIDGET_LANG_POSTTIME}>
-        </th>
-        <th><{$smarty.const._MD_WIDGET_LANG_CONTROL}></th>
-      </tr>
-    </thead>
-    <tbody>
-      <{foreach item=obj from=$objects}>
-        <tr class="<{cycle values='odd,even'}>">
-          <td><{$obj->getShow('instance_id')}></td>
-          <td><a href="<{xoops_cooluri dirname=$dirname dataname=$dataname data_id=$obj->getShow('instance_id') action=view}>"><{$obj->getShow('title')}></a></td>
-          <td><{$obj->getShow('type')}></td>
-          <td><{$obj->getShow('posttime')|xoops_formattimestamp:m}></td>
 
-          <td>
-            <a href="<{xoops_cooluri dirname=$dirname dataname=$dataname data_id=$obj->getShow('instance_id') action=edit}>"><{$smarty.const._EDIT}></a>
-            <a href="<{xoops_cooluri dirname=$dirname dataname=$dataname data_id=$obj->getShow('instance_id') action=delete}>"><{$smarty.const._DELETE}></a>
-              <a href="<{xoops_cooluri dirname=$dirname dataname=block data_id=$obj->getShow('instance_id') action=edit}>"><{$smarty.const._MD_WIDGET_LANG_BLOCK}></a>
-          </td>
+<article class="widget">
+
+
+<header>
+    <h2><{$smarty.const._MD_WIDGET_LANG_WIDGET}> <{$smarty.const._LIST}></h2>
+
+    <div class="grid-2">
+    <{include file="db:`$dirname`_inc_menu.html"}>
+        <{if count($objects) > 0}>
+        <div class="pagenavi"><{xoops_pagenavi pagenavi=$pageNavi}></div>
+        <{/if}>
+    </div>
+</header>
+
+    <{if count($objects) > 0}>
+
+    <table>
+        <thead>
+        <tr>
+            <th class="list-order">
+                ID
+            </th>
+            <th>
+                <{$smarty.const._MD_WIDGET_LANG_TITLE}>
+            </th>
+            <th>
+                <{$smarty.const._MD_WIDGET_LANG_TYPE}>
+            </th>
+            <th>
+                <{$smarty.const._MD_WIDGET_LANG_POSTTIME}>
+            </th>
+            <th class="list-action"><{$smarty.const._MD_WIDGET_LANG_CONTROL}></th>
         </tr>
-      <{/foreach}>
-    </tbody>
-  </table>
-  <div class="pagenavi"><{xoops_pagenavi pagenavi=$pageNavi}></div>
-<{/if}>
-</div>
+        </thead>
+        <tbody>
+        <{foreach item=obj from=$objects}>
+        <tr class="<{cycle values='odd,even'}>">
+            <td><{$obj->getShow('instance_id')}></td>
+            <td><a href="<{xoops_cooluri dirname=$dirname dataname=$dataname data_id=$obj->getShow('instance_id') action=view}>"><{$obj->getShow('title')}></a></td>
+            <td><{$obj->getShow('type')}></td>
+            <td><{$obj->getShow('posttime')|xoops_formattimestamp:m}></td>
+
+            <td class="list-action">
+                <a class="i-edit" href="<{xoops_cooluri dirname=$dirname dataname=$dataname data_id=$obj->getShow('instance_id') action=edit}>" data-tooltip=" <{$smarty.const._EDIT}>">
+                    <img class="svg edit" src="<{$xoops_url}>/images/icons/edit.svg" width="1em" height="1em" alt="edit"></a>
+                <a class="i-delete" href="<{xoops_cooluri dirname=$dirname dataname=$dataname data_id=$obj->getShow('instance_id') action=delete}>" data-tooltip="<{$smarty.const._DELETE}>">
+                    <img class="svg delete" src="<{$xoops_url}>/images/icons/delete.svg" width="1em" height="1em" alt="delete"></a>
+                <a class="i-block" href="<{xoops_cooluri dirname=$dirname dataname=block data_id=$obj->getShow('instance_id') action=edit}>" data-tooltip="<{$smarty.const._MD_WIDGET_LANG_BLOCK}>">
+                    <img class="svg block" src="<{$xoops_url}>/images/icons/block-plus.svg" width="1em" height="1em" alt="block"></a>
+            </td>
+        </tr>
+        <{/foreach}>
+        </tbody>
+    </table>
+    <{/if}>
+
+    <footer>
+        <div class="grid-2">
+        <{include file="db:`$dirname`_inc_menu.html"}>
+        <{if count($objects) > 0}>
+        <div class="pagenavi"><{xoops_pagenavi pagenavi=$pageNavi}></div>
+        <{/if}>
+        </div>
+    </footer>
+
+
+</article>

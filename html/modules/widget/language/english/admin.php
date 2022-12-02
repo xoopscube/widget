@@ -6,5 +6,3 @@
 **/
 
 require_once XOOPS_TRUST_PATH . '/modules/widget/language/english/admin.php';
-
-?>

@@ -208,4 +208,3 @@ class Widget_GroupClientDelegate implements Legacy_iGroupClientDelegate
         $isCalled = true;
     }
 }
-?>

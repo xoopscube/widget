@@ -48,5 +48,3 @@ class Widget_PluginListAction extends Widget_AbstractListAction
 		$render->setAttribute('dataname', self::DATANAME);
 	}
 }
-
-?>

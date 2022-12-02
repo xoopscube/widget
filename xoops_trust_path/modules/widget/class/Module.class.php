@@ -461,5 +461,3 @@ class Widget_Module extends Legacy_ModuleAdapter
 		$root->mController->executeRedirect(XOOPS_URL, 1, _MD_WIDGET_ERROR_PERMISSION);
 	}
 }
-
-?>

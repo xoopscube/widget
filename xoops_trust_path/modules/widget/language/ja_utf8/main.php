@@ -43,6 +43,3 @@ define('_MD_WIDGET_LANG_BLOCK_TITLE', 'ブロック名');
 define('_MD_WIDGET_LANG_VISIBLE', 'ブロック表示');
 define('_MD_WIDGET_LANG_IS_ACTIVE_BLOCK', '有効');
 define('_MD_WIDGET_LANG_BLOCK_SIDE', '表示位置');
-
-
-?>

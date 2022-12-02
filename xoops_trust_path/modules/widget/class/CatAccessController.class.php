@@ -130,5 +130,3 @@ class Widget_CatAccessController extends Widget_AbstractAccessController
 		return $idList;
 	}
 }
-
-?>

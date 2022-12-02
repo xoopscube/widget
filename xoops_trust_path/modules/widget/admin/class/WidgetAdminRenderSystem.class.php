@@ -300,5 +300,3 @@ class Widget_AdminRenderSystem extends Legacy_AdminRenderSystem
         );
     }
 }
-
-?>

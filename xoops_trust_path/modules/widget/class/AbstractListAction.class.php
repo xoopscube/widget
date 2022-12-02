@@ -106,10 +106,10 @@ abstract class Widget_AbstractListAction extends Widget_AbstractAction
 	**/
 	public function getDefaultView()
 	{
-		$this->mFilter =& $this->_getFilterForm();
+		$this->mFilter = $this->_getFilterForm();
 		$this->mFilter->fetch();
 	
-		$handler =& $this->_getHandler();
+		$handler = $this->_getHandler();
 		$this->mObjects =& $handler->getObjects($this->mFilter->getCriteria());
 	
 		return WIDGET_FRAME_VIEW_INDEX;
@@ -127,5 +127,3 @@ abstract class Widget_AbstractListAction extends Widget_AbstractAction
 		return $this->getDefaultView();
 	}
 }
-
-?>

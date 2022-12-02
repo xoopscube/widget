@@ -165,5 +165,3 @@ abstract class Widget_AbstractFilterForm
         return $criteria;
     }
 }
-
-?>

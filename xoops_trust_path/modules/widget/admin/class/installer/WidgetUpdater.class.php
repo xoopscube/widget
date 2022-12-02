@@ -333,5 +333,3 @@ class Widget_Updater
 		}
 	}
 }
-
-?>

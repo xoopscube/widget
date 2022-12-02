@@ -329,5 +329,3 @@ class Widget_Utils
         return $module->get('mid');
     }
 }
-
-?>

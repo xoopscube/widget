@@ -94,5 +94,3 @@ abstract class Widget_AbstractDeleteAction extends Widget_AbstractEditAction
         $this->mRoot->mController->executeForward(Legacy_Utils::renderUri($this->mAsset->mDirname));
     }
 }
-
-?>

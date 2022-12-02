@@ -76,5 +76,3 @@ class Widget_InstanceDeleteForm extends XCube_ActionForm
         $obj->set('instance_id', $this->get('instance_id'));
     }
 }
-
-?>

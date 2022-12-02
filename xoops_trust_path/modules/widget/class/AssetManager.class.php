@@ -270,5 +270,3 @@ class Widget_AssetManager
         return WIDGET_TRUST_PATH . ($isAdmin ? '/admin/' : '/');
     }
 }
-
-?>

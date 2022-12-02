@@ -35,5 +35,3 @@ class Widget_ImageClientDelegate
 		$isCalled = true;
 	}
 }
-
-?>

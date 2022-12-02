@@ -26,5 +26,3 @@ class Widget_BlockUninstallForm extends Legacy_CustomBlockDeleteForm
 		$obj->set('visible', false);
 	}
 }
-
-?>

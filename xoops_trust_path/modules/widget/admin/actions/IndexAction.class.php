@@ -42,5 +42,3 @@ class Widget_Admin_IndexAction extends Widget_AbstractAction
 		$render->setAttribute('adminMenu', $this->mModule->getAdminMenu());
 	}
 }
-
-?>

@@ -74,4 +74,3 @@ class Widget_CoolUriDelegate
         }
     }
 }
-?>

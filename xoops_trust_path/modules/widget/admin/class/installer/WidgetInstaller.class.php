@@ -284,5 +284,3 @@ class Widget_Installer
         return true;
     }
 }
-
-?>

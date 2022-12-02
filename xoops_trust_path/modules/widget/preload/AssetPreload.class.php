@@ -131,5 +131,3 @@ class Widget_AssetPreloadBase extends XCube_ActionFilter
         }
     }
 }
-
-?>

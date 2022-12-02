@@ -67,6 +67,3 @@ define('_MI_WIDGET_TPL_INSTANCE_LIST', 'Instance List');
 define('_MI_WIDGET_TPL_INSTANCE_EDIT', 'Instance Edit');
 define('_MI_WIDGET_TPL_INSTANCE_DELETE', 'Instance Delete');
 define('_MI_WIDGET_TPL_INSTANCE_VIEW', 'Instance View');
-
-
-?>

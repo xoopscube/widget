@@ -159,5 +159,3 @@ class Widget_ViewBlock extends Legacy_BlockProcedure
 		$renderSystem->renderBlock($render);
 	}
 }
-
-?>

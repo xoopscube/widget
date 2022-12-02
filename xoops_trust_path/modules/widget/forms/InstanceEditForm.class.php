@@ -146,5 +146,3 @@ $this->mFieldProperties['category_id']->addMessage('required', _MD_WIDGET_ERROR_
 		return mktime(0, 0, 0, $timeArray[1], $timeArray[2], $timeArray[0]);
 	}
 }
-
-?>

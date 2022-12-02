@@ -115,5 +115,3 @@ Abstract class Widget_AbstractAccessController
 	**/
 	abstract public function getPermittedIdList(/*** string ***/ $action, /*** int ***/ $categoryId=0);
 }
-
-?>

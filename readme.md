@@ -4,7 +4,7 @@
 
 ## ///// — Widget - Nocode Frontend Widgets Blocks management
 
-![widget](https://repository-images.githubusercontent.com/336454879/2c23f071-9e02-495e-a508-fbb62f9ac0c7)
+![widget](https://repository-images.githubusercontent.com/336455278/338e0354-d6db-4ccb-97c2-fa47567f8080)
 
 
 MODULE | Widget

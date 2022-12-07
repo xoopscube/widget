@@ -11,8 +11,8 @@ if(!defined('XOOPS_ROOT_PATH'))
 }
 
 define('WIDGET_ADMIN_RENDER_TEMPLATE_DIRNAME','templates');
-define('WIDGET_ADMIN_RENDER_FALLBACK_PATH',XOOPS_MODULE_PATH . '/legacy/admin/theme');    // TODO will be use other path
-define('WIDGET_ADMIN_RENDER_FALLBACK_URL',XOOPS_MODULE_URL . '/legacy/admin/theme');    // TODO will be use other url
+define('WIDGET_ADMIN_RENDER_FALLBACK_PATH',XOOPS_MODULE_PATH . '/legacy/admin/theme'); // TODO use other path
+define('WIDGET_ADMIN_RENDER_FALLBACK_URL',XOOPS_MODULE_URL . '/legacy/admin/theme');  // TODO use other url
 
 /**
  * Widget_AdminRenderSystem
@@ -30,7 +30,7 @@ class Widget_AdminRenderSystem extends Legacy_AdminRenderSystem
     {
         $this->mController =& $controller;
     
-        $this->mSmarty = new Legacy_AdminSmarty();    // TODO will be use other class?
+        $this->mSmarty = new Legacy_AdminSmarty();    // TODO use other class?
         $this->mSmarty->register_modifier('theme',array($this,'modifierTheme'));
         $this->mSmarty->register_function('stylesheet',array($this,'functionStylesheet'));
     
@@ -45,7 +45,7 @@ class Widget_AdminRenderSystem extends Legacy_AdminRenderSystem
             )
         );
     
-        // TODO event name is this?
+        // TODO what event name is this?
         XCube_DelegateUtils::call('Legacy_RenderSystem.SetupXoopsTpl',new XCube_Ref($this->mSmarty));
     
         $this->mSmarty->force_compile = (
@@ -63,7 +63,7 @@ class Widget_AdminRenderSystem extends Legacy_AdminRenderSystem
     **/
     public function renderBlock(/*** XCube_RenderTarget ***/ &$target)
     {
-        parent::renderBlock($target);    // TODO will be use other method
+        parent::renderBlock($target);    // TODO use other method
     }
 
     /**
@@ -81,7 +81,7 @@ class Widget_AdminRenderSystem extends Legacy_AdminRenderSystem
         $this->mSmarty->assign(
             array(
                 'stdout_buffer'    => $this->_mStdoutBuffer,
-                'currentModule'       => $module,
+                'currentModule'    => $module,
                 'legacy_sitename'  => $context->getAttribute('legacy_sitename'),
                 'legacy_pagetitle' => $context->getAttribute('legacy_pagetitle'),
                 'legacy_slogan'    => $context->getAttribute('legacy_slogan')
@@ -289,7 +289,7 @@ class Widget_AdminRenderSystem extends Legacy_AdminRenderSystem
             return;
         }
     
-        // TODO will be use other method
+        // TODO use other method
         printf(
             '<link rel="stylesheet" typw="text/css" media="%s" href="%s/legacy/admin/css.php?file=%s%s%s" />',
             (isset($params['media']) ? $params['media'] : 'all'),

@@ -98,8 +98,8 @@ class Widget_ViewBlock extends Legacy_BlockProcedure
 		{
 			return null;
 		}
-		$form = '<label for="'. $this->_mBlock->get('dirname') .'block_limit">Widget ID</label>&nbsp;:
-		<input type="text" size="5" name="options[0]" id="'. $this->_mBlock->get('dirname') .'block_id" value="'.$this->getBlockOption('id').'" />';
+		$form = '<label for="'. $this->_mBlock->get('dirname') .'block_limit">Widget ID
+		<input type="text" size="5" name="options[0]" id="'. $this->_mBlock->get('dirname') .'block_id" value="'.$this->getBlockOption('id').'"></label>';
 		return $form;
 	}
 
@@ -139,7 +139,9 @@ class Widget_ViewBlock extends Legacy_BlockProcedure
 	**/
 	function execute()
 	{
-		if(! $this->_mObject) return;
+		if(! $this->_mObject) {
+            return;
+        }
 		$this->_mObject->loadPlugin();
 	
 		$pluginFile = WIDGET_TRUST_PATH.'/plugins/'.$this->_mObject->getShow('type').'/plugin.php';

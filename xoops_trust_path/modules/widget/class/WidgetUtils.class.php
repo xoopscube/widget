@@ -59,7 +59,9 @@ class Widget_Utils
     
         $accessController = self::getAccessControllerModule($dirname);
     
-        if(! is_object($accessController)) return;
+        if(! is_object($accessController)) {
+            return;
+        }
     
         $role = $accessController->get('role');
         $idList = array();

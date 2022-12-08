@@ -1293,5 +1293,3 @@ class Widget_InstallUtils
         return true;
     }
 }
-
-?>

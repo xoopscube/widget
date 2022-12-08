@@ -108,5 +108,3 @@ class Widget_GroupAccessController extends Widget_AbstractAccessController
 		return $idList;
 	}
 }
-
-?>

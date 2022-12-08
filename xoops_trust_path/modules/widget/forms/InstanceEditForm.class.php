@@ -55,17 +55,17 @@ class Widget_InstanceEditForm extends XCube_ActionForm
 		// Set field properties
 		//
 		$this->mFieldProperties['instance_id'] = new XCube_FieldProperty($this);
-$this->mFieldProperties['instance_id']->setDependsByArray(array('required'));
-$this->mFieldProperties['instance_id']->addMessage('required', _MD_WIDGET_ERROR_REQUIRED, _MD_WIDGET_LANG_INSTANCE_ID);
+        $this->mFieldProperties['instance_id']->setDependsByArray(array('required'));
+        $this->mFieldProperties['instance_id']->addMessage('required', _MD_WIDGET_ERROR_REQUIRED, _MD_WIDGET_LANG_INSTANCE_ID);
 		$this->mFieldProperties['title'] = new XCube_FieldProperty($this);
 		$this->mFieldProperties['title']->setDependsByArray(array('required','maxlength'));
 		$this->mFieldProperties['title']->addMessage('required', _MD_WIDGET_ERROR_REQUIRED, _MD_WIDGET_LANG_TITLE);
 		$this->mFieldProperties['title']->addMessage('maxlength', _MD_WIDGET_ERROR_MAXLENGTH, _MD_WIDGET_LANG_TITLE, '255');
 		$this->mFieldProperties['title']->addVar('maxlength', '255');
-	   $this->mFieldProperties['category_id'] = new XCube_FieldProperty($this);
-$this->mFieldProperties['category_id']->setDependsByArray(array('required'));
-$this->mFieldProperties['category_id']->addMessage('required', _MD_WIDGET_ERROR_REQUIRED, _MD_WIDGET_LANG_CATEGORY_ID);
-	   $this->mFieldProperties['type'] = new XCube_FieldProperty($this);
+	    $this->mFieldProperties['category_id'] = new XCube_FieldProperty($this);
+        $this->mFieldProperties['category_id']->setDependsByArray(array('required'));
+        $this->mFieldProperties['category_id']->addMessage('required', _MD_WIDGET_ERROR_REQUIRED, _MD_WIDGET_LANG_CATEGORY_ID);
+	    $this->mFieldProperties['type'] = new XCube_FieldProperty($this);
 		$this->mFieldProperties['type']->setDependsByArray(array('required','maxlength'));
 		$this->mFieldProperties['type']->addMessage('required', _MD_WIDGET_ERROR_REQUIRED, _MD_WIDGET_LANG_TYPE);
 		$this->mFieldProperties['type']->addMessage('maxlength', _MD_WIDGET_ERROR_MAXLENGTH, _MD_WIDGET_LANG_TYPE, '50');
@@ -146,5 +146,3 @@ $this->mFieldProperties['category_id']->addMessage('required', _MD_WIDGET_ERROR_
 		return mktime(0, 0, 0, $timeArray[1], $timeArray[2], $timeArray[0]);
 	}
 }
-
-?>

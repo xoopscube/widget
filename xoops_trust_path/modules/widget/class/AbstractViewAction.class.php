@@ -68,7 +68,7 @@ abstract class Widget_AbstractViewAction extends Widget_AbstractAction
 	{
 		$id = $this->_getId();
 	
-		$this->mObjectHandler =& $this->_getHandler();
+		$this->mObjectHandler = $this->_getHandler();
 	
 		$this->mObject =& $this->mObjectHandler->get($id);
 	}
@@ -128,5 +128,3 @@ abstract class Widget_AbstractViewAction extends Widget_AbstractAction
 		$this->mRoot->mController->executeRedirect($this->_getNextUri($this->_getConst('DATANAME'), 'list'), 1, _MD_WIDGET_ERROR_CONTENT_IS_NOT_FOUND);
 	}
 }
-
-?>

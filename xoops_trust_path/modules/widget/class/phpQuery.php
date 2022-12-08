@@ -639,7 +639,7 @@ class DOMDocumentWrapper {
 	private function documentFragmentLoadMarkup($fragment, $charset, $markup = null) {
 		// TODO error handling
 		// TODO copy doctype
-		// tempolary turn off
+		// temporary turn off
 		$fragment->isDocumentFragment = false;
 		if ($fragment->isXML) {
 			if ($fragment->isXHTML) {

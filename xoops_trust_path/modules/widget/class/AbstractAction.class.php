@@ -301,5 +301,3 @@ abstract class Widget_AbstractAction
         }
     }
 }
-
-?>

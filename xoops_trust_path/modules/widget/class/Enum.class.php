@@ -16,5 +16,3 @@ interface Widget_AuthType
     const POST = "post";
     const MANAGE = "manage";
 }
-
-?>

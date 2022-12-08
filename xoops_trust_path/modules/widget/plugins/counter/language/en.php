@@ -11,3 +11,4 @@ define('_WIDGET_PLUGIN_COUNTER_COUNTER_DESC', 'Set initial counter number. This 
 define('_WIDGET_PLUGIN_COUNTER_PERPAGE', 'Count for each page');
 define('_WIDGET_PLUGIN_COUNTER_PERPAGE_YES', 'Count for each Page View');
 define('_WIDGET_PLUGIN_COUNTER_PERPAGE_NO', 'Count total Page View');
+define('_WIDGET_PLUGIN_COUNTER_PAGECOUNTER', 'Page Counter');

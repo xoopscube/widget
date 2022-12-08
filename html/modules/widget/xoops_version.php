@@ -12,5 +12,3 @@ if(!defined('XOOPS_ROOT_PATH'))
 
 $myDirName = basename(dirname(__FILE__));
 require XOOPS_TRUST_PATH . '/modules/widget/xoops_version.php';
-
-?>

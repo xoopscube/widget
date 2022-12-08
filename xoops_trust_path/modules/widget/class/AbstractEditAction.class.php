@@ -83,7 +83,7 @@ abstract class Widget_AbstractEditAction extends Widget_AbstractAction
     {
         $id = $this->_getId();
     
-        $this->mObjectHandler =& $this->_getHandler();
+        $this->mObjectHandler = $this->_getHandler();
     
         $this->mObject =& $this->mObjectHandler->get($id);
     
@@ -227,5 +227,3 @@ abstract class Widget_AbstractEditAction extends Widget_AbstractAction
         $this->mRoot->mController->executeForward($this->_getNextUri($this->_getConst('DATANAME')));
     }
 }
-
-?>

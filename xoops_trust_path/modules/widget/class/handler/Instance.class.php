@@ -165,7 +165,9 @@ class Widget_InstanceHandler extends Legacy_AbstractClientObjectHandler
     public function __construct(/*** XoopsDatabase ***/ &$db,/*** string ***/ $dirname)
     {
         $this->mTable = strtr($this->mTable,array('{dirname}' => $dirname));
-        parent::XoopsObjectGenericHandler($db);
+        // TODO Error: Call to undefined method
+        // parent::XoopsObjectGenericHandler($db);
+        parent::__construct($db);
     }
 
     public function insert(&$obj, $force=false)
@@ -179,5 +181,3 @@ class Widget_InstanceHandler extends Legacy_AbstractClientObjectHandler
         return true;
     }
 }
-
-?>

@@ -109,5 +109,3 @@ class Widget_NoneAccessController extends Widget_AbstractAccessController
 		return array();
 	}
 }
-
-?>

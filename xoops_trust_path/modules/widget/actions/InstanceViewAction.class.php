@@ -56,7 +56,9 @@ class Widget_InstanceViewAction extends Widget_AbstractViewAction
         $handler = xoops_gethandler('block');
         $blocks = $handler->getByModule($this->mModule->mXoopsModule->get('mid'));
         foreach($blocks as $block){
-            $instanceId = array_shift(explode('|', $block->get('options')));
+        // TODO check this
+			$array_options = explode('|', $block->get('options'));
+			$instanceId = array_shift($array_options);
             if($instanceId == $this->mObject->get('instance_id')){
                 $ret[] = $block;
             }
@@ -64,5 +66,3 @@ class Widget_InstanceViewAction extends Widget_AbstractViewAction
         return $ret;
     }
 }
-
-?>

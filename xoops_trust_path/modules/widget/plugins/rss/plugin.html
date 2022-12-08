@@ -1,5 +1,8 @@
 <div class="rss">
-<{if count($block->mFeed) > 0}>
+<{if ($block->mFeed) && count($block->mFeed) > 0}>
+    <{* if ($block->mFeed)|@count > 0 *}>
+    <{* if $block|@count|$block->mFeed > 0 *}>
+    <p>print</p>
 <h3><a href="<{$block->mFeed->get_permalink()}>"><{$block->mFeed->get_title()}></a></h3>
 <ul>
     <{foreach item=item from=$block->mFeed->get_items(0, $block->mLimit)}>

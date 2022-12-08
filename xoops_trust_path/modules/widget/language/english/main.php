@@ -43,4 +43,3 @@ define('_MD_WIDGET_LANG_BLOCK_TITLE', 'Block Title');
 define('_MD_WIDGET_LANG_VISIBLE', 'Show Block ?');
 define('_MD_WIDGET_LANG_IS_ACTIVE_BLOCK', 'Is Active?');
 define('_MD_WIDGET_LANG_BLOCK_SIDE', 'Display Side');
-?>

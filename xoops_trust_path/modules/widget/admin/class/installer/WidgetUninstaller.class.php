@@ -265,5 +265,3 @@ class Widget_Uninstaller
         return true;
     }
 }
-
-?>

@@ -188,7 +188,7 @@ class Widget_BlockEditAction extends Widget_AbstractEditAction
     /**
      * @private
      * Gets a value indicating whether the option form needs the row in the table to display its form.
-     * @remark This method is requred for the compatibility with XOOPS2.
+     * @remark This method is required for compatibility with XOOPS2.
      * @return bool
      */
     function _hasVisibleOptionForm()
@@ -208,4 +208,3 @@ class Widget_BlockEditAction extends Widget_AbstractEditAction
 
 
 }
-?>

@@ -1,19 +1,51 @@
-xoops-widget
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/2.0.0/active.svg)](https://github.com/xoopscube/)
+![License GPL](https://img.shields.io/badge/License-GPL-green)
+![X-Updare Store](https://img.shields.io/badge/X--Update%20Store-Pending-red)
+
+## ///// — Widget - Nocode Frontend Widgets Blocks management
+
+![widget](https://repository-images.githubusercontent.com/336455278/338e0354-d6db-4ccb-97c2-fa47567f8080)
+
+
+MODULE | Widget
+------------ | -------------
+Description | No-code low-code module of plugins to manage multiple widgets instances and blocks.
+Render Engine | Smarty v2 and XCube Layout
+Version | 2.3.1
+Update | @gigmaster Nuno Luciano (XCL7)
+Author | Original by @kilica (core developer)
+Copyright | 2011-2022 Authors
+License | GPL
+
+
+##### :computer: The Minimum Requirements
+
+
+
+          Apache, Nginx, etc. PHP 7.2.x
+          MySQL 5.6, MariaDB  InnoDB utf8 / utf8mb4
+          XCL version 2.3.+
+
+
+
+-----
+
+
+
+## Overview
+
+Widget
 ============
 
-XOOPS-Widget is a XOOPS Cube Legacy module.
-
-You can add small widgets to your site like map, twitter, text, etc. with this module.
-
-Requirement
------------
-XOOPS Cube Legacy 2.2 or later
+Widget is a XOOPSCube Legacy module to install and manage widget plugins.   
+This module features a frontend Widgets Blocks management to install widget plugins and blocks.  
+It allows you to create multiple instances and to insert blocks and widgets into any of the modules pages, set cache and user group permissions.
+You can add widgets like maps, custom html content, smarty variables, banners, rss feed, etc.
 
 
 Template
 --------
-This module's template based on Bootstrap, from Twitter.
-I recommend to use theme of Bootstrap based.
+The module's templates are based on thme xcl_default built with PicoCSS.
 
 Included Plugins
 ----------------

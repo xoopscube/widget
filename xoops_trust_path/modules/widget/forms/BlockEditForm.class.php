@@ -161,5 +161,3 @@ class Widget_BlockEditForm extends XCube_ActionForm
 		}
 	}
 }
-
-?>

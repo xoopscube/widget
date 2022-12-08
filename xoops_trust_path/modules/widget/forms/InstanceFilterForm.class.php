@@ -96,5 +96,3 @@ class Widget_InstanceFilterForm extends Widget_AbstractFilterForm
         $this->_mCriteria->addSort($this->getSort(), $this->getOrder());
     }
 }
-
-?>
